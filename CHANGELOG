@@ -1,0 +1,12 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]
+
+### Added
+- Initialized Laravel skeleton
+- Customized `composer.json` metadata
+- Added Docker environment (`Dockerfile` & `docker-compose.yml`)
+- Added `Makefile` with commands: `up`, `down`, `bash`, `migrate`, `seed`, `test`, `logs`
+- Updated `README.md` with installation and usage instructions
