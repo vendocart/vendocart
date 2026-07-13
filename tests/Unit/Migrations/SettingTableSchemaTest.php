@@ -12,7 +12,7 @@ class SettingTableSchemaTest extends TestCase
     use RefreshDatabase;
 
     #[Test]
-    public function users_table_has_expected_columns()
+    public function settings_table_has_expected_columns()
     {
         $this->assertTrue(
             Schema::hasColumns('settings', [
