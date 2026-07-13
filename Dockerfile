@@ -1,4 +1,4 @@
-FROM php:8.5-fpm
+FROM php:8.4-fpm
 LABEL authors="Mojtaba Pakzad"
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
  && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
  && docker-php-ext-install -j$(nproc) pdo_pgsql mbstring zip exif pcntl intl gd \
- && pecl install redis \
- && docker-php-ext-enable redis \
+# && pecl install redis \
+# && docker-php-ext-enable redis \
  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
